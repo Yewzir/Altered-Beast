@@ -70,12 +70,9 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	HBITMAP hBitmap, hPrevBitmap;
 	RECT rc;
 
-	static std::unique_ptr<AlteredBeast> ptr;
-
 	switch (msg) {
 	case WM_CREATE:
-		ptr = std::make_unique<AlteredBeast>();
-		ptr->Create();
+		AlteredBeast::Singleton().Create();
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);
@@ -93,7 +90,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 		hBitmap = CreateCompatibleBitmap(hDevice, rc.right, rc.bottom),
 		hPrevBitmap = HBITMAP(SelectObject(hMemory, hBitmap));
 
-		ptr->Paint(hMemory);
+		AlteredBeast::Singleton().Paint(hMemory);
 		BitBlt(hDevice, rc.left, rc.top, rc.right, rc.bottom, hMemory, 0, 0, SRCCOPY);
 
 		SelectObject(hMemory, hPrevBitmap);
