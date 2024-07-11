@@ -9,13 +9,12 @@
   power-ups, he will morph into a mighty creature, only this time it ain't so average shaped...
 
 <p align="center">
-  <img width="640" height="448" src="https://github.com/Yewzir/Altered-Beast/assets/116750824/edcfa077-adfe-4826-813c-5de814da3405">
+  <img width="640" height="448" src="https://github.com/user-attachments/assets/309968dd-7c57-4739-99d1-341fd34bfd18">
 </p>
-
 
 <p align="justify">
   The project in my repository showcases the transforming effects of power-ups on the Hero, as
   seen in the original game. All graphical content is copyrighted and property of Sega Corporation
   only. The project was fully developed in the C++ programming language using Microsoft Visual
-  Studio 2022 and is backed by the Windows API.
+  Studio and Adobe Photoshop, and was backed by the Windows API.
 </p>
